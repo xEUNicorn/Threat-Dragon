@@ -42,57 +42,6 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Auth Token",
-              "description": "Session Cookie",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Auth Token"
-            ],
-            "id": "ed5d9e95-ea6b-4968-afcb-82b50f0c0efc",
-            "source": {
-              "cell": "b89ca477-dc4e-42b2-8b80-5bd1e727c4f4",
-              "port": "7e362c0b-fd33-4c0a-9fc1-149d917a8a4c"
-            },
-            "target": {
-              "cell": "f2172fbc-5945-4eb7-948b-f7af6e1f607e",
-              "port": "3f685d8d-c40a-489a-b28a-a7ed6c832050"
-            },
-            "vertices": [
-              {
-                "x": 300,
-                "y": 420
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
                 "stroke": "red",
                 "strokeWidth": 2.5,
                 "targetMarker": {
@@ -857,6 +806,87 @@
                 "y": 510
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Auth Token",
+              "description": "Session Cookie",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "d969359e-447d-4a35-88d1-66bc20f28560",
+                  "title": "Auth Information Disclosure",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Data flowing across saved feedback comments may be sniffed by an attacker. Depending on what type of data an attacker can read, it may be used to attack other parts of the system or simply be a disclosure of information leading to compliance violations. Consider encrypting the data flow.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 74,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Auth Token"
+            ],
+            "id": "ed5d9e95-ea6b-4968-afcb-82b50f0c0efc",
+            "source": {
+              "cell": "b89ca477-dc4e-42b2-8b80-5bd1e727c4f4",
+              "port": "7e362c0b-fd33-4c0a-9fc1-149d917a8a4c"
+            },
+            "target": {
+              "cell": "f2172fbc-5945-4eb7-948b-f7af6e1f607e",
+              "port": "3f685d8d-c40a-489a-b28a-a7ed6c832050"
+            },
+            "vertices": [
+              {
+                "x": 300,
+                "y": 420
+              }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "position": {
@@ -1715,6 +1745,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 73
+    "threatTop": 74
   }
 }
